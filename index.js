@@ -6,6 +6,7 @@ const connectDatabase = require("./helpers/database/db-connect")
 const errorHandler = require("./Middlewares/errors/error-handler")
 app.use(express.json());
 
+
 //Mongodb Connection 
 connectDatabase()
 
