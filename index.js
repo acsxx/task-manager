@@ -3,7 +3,7 @@ const app = express();
 require("dotenv").config()
 const routers = require("./routers")
 const connectDatabase = require("./helpers/database/db-connect")
-const errorHandler = require("./Middlewares/errors/error-handler")
+const errorHandler = require("./middlewares/errors/error-handler")
 app.use(express.json());
 
 

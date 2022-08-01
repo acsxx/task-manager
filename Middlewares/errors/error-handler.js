@@ -8,6 +8,10 @@ const errorHandler = (err, req, res, next) => {
   if (err.name === "ValidationError") {
     err = new CustomError(err.message, 400);
   }
+  //Mongodb duplicate error handling
+  if (err.code === 11000){
+    err = new CustomError("Email has already been used !!!", 400);
+  }
 
   //console.log(err.name + " = " + err.message, err.status);
 
